@@ -1,0 +1,2922 @@
+/**
+ * WP LeadFlow CRM — admin styles.
+ *
+ * Scoped to .lf-wrap so nothing leaks into other admin screens.
+ */
+
+.lf-wrap {
+	--lf-brand: #4f46e5;
+	--lf-brand-strong: #4338ca;
+	--lf-brand-soft: #eef2ff;
+	--lf-text: #1e1e1e;
+	--lf-text-muted: #50575e;
+	--lf-border: #dcdcde;
+	--lf-surface: #fff;
+	--lf-radius: 10px;
+	--lf-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+	--lf-ok: #007017;
+	--lf-ok-bg: #edfaef;
+	--lf-warning: #8a5a00;
+	--lf-warning-bg: #fcf9e8;
+	--lf-error: #b32d2e;
+	--lf-error-bg: #fcf0f1;
+	--lf-gap: 20px;
+
+	color: var(--lf-text);
+	max-width: 1320px;
+}
+
+/* Header ------------------------------------------------------------ */
+
+.lf-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin: 12px 0 8px;
+}
+
+.lf-header__brand {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	min-width: 0;
+}
+
+.lf-header__logo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	background: linear-gradient(135deg, var(--lf-brand) 0%, #7c3aed 100%);
+	color: #fff;
+}
+
+.lf-header__logo .dashicons {
+	width: 26px;
+	height: 26px;
+	font-size: 26px;
+}
+
+.lf-header__product {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--lf-brand-strong);
+}
+
+.lf-wrap .lf-header__title {
+	margin: 2px 0 0;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.lf-header__subtitle {
+	margin: 4px 0 0;
+	color: var(--lf-text-muted);
+}
+
+.lf-header__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+/* Badges ------------------------------------------------------------- */
+
+.lf-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.6;
+	letter-spacing: normal;
+	text-transform: none;
+	white-space: nowrap;
+}
+
+.lf-badge--muted {
+	background: #f0f0f1;
+	color: var(--lf-text-muted);
+}
+
+.lf-badge--soon {
+	margin-left: auto;
+	background: var(--lf-brand-soft);
+	color: var(--lf-brand-strong);
+}
+
+/* Cards & grid -------------------------------------------------------- */
+
+.lf-card {
+	background: var(--lf-surface);
+	border: 1px solid var(--lf-border);
+	border-radius: var(--lf-radius);
+	box-shadow: var(--lf-shadow);
+	padding: 20px;
+}
+
+.lf-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: var(--lf-gap);
+	margin-top: var(--lf-gap);
+}
+
+.lf-card--wide {
+	grid-column: 1 / -1;
+}
+
+/* Welcome ------------------------------------------------------------- */
+
+.lf-welcome {
+	margin-top: 16px;
+	padding: 24px;
+	border-radius: var(--lf-radius);
+	background: linear-gradient(120deg, var(--lf-brand-soft) 0%, #f5f3ff 100%);
+	border: 1px solid #e0e7ff;
+}
+
+.lf-wrap .lf-welcome__title {
+	margin: 0 0 6px;
+	font-size: 20px;
+}
+
+.lf-welcome__text {
+	max-width: 760px;
+	margin: 0;
+	font-size: 14px;
+	color: var(--lf-text-muted);
+}
+
+/* Sections ------------------------------------------------------------ */
+
+.lf-section__header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.lf-section__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 36px;
+	height: 36px;
+	border-radius: 8px;
+	background: var(--lf-brand-soft);
+	color: var(--lf-brand-strong);
+}
+
+.lf-wrap .lf-section__title {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.lf-section__description {
+	margin: 0 0 12px;
+	color: var(--lf-text-muted);
+}
+
+.lf-feature-list {
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
+}
+
+.lf-feature-list li {
+	position: relative;
+	margin: 0 0 6px;
+	padding-left: 20px;
+}
+
+.lf-feature-list li::before {
+	content: "";
+	position: absolute;
+	top: 0.5em;
+	left: 4px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--lf-brand);
+	opacity: 0.55;
+}
+
+.lf-skeleton {
+	display: grid;
+	gap: 8px;
+}
+
+.lf-skeleton span {
+	display: block;
+	height: 10px;
+	border-radius: 6px;
+	background: linear-gradient(90deg, #f0f0f1 25%, #f6f7f7 50%, #f0f0f1 75%);
+	background-size: 200% 100%;
+	animation: lf-shimmer 1.8s ease-in-out infinite;
+}
+
+.lf-skeleton span:nth-child(2) {
+	width: 80%;
+}
+
+.lf-skeleton span:nth-child(3) {
+	width: 55%;
+}
+
+@keyframes lf-shimmer {
+	0% {
+		background-position: 100% 0;
+	}
+
+	100% {
+		background-position: -100% 0;
+	}
+}
+
+.lf-empty {
+	margin-top: var(--lf-gap);
+	text-align: center;
+	color: var(--lf-text-muted);
+}
+
+/* Settings ------------------------------------------------------------ */
+
+.lf-tabs {
+	margin-top: 16px;
+}
+
+.lf-settings {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top: 0;
+}
+
+.lf-settings .form-table th {
+	width: 240px;
+}
+
+/* System status ------------------------------------------------------- */
+
+.lf-status__intro {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+.lf-status__intro p {
+	margin: 0;
+	color: var(--lf-text-muted);
+}
+
+.lf-status__intro .button .dashicons {
+	margin: 3px 4px 0 -2px;
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.lf-status__table th[scope="row"] {
+	width: 30%;
+	font-weight: 600;
+}
+
+.lf-status__table code {
+	background: transparent;
+	padding: 0;
+	word-break: break-word;
+}
+
+.lf-status-pill {
+	display: inline-block;
+	padding: 1px 10px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 600;
+	background: #f0f0f1;
+	color: var(--lf-text-muted);
+}
+
+.lf-status-pill--ok {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-status-pill--warning {
+	background: var(--lf-warning-bg);
+	color: var(--lf-warning);
+}
+
+.lf-status-pill--error {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+}
+
+/* Accessibility --------------------------------------------------------- */
+
+.lf-wrap a:focus-visible,
+.lf-wrap button:focus-visible {
+	outline: 2px solid var(--lf-brand);
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lf-skeleton span {
+		animation: none;
+	}
+}
+
+@media (forced-colors: active) {
+	.lf-card,
+	.lf-welcome,
+	.lf-badge,
+	.lf-status-pill {
+		border: 1px solid CanvasText;
+	}
+}
+
+/* Responsive ----------------------------------------------------------- */
+
+@media screen and (max-width: 782px) {
+	.lf-wrap {
+		--lf-gap: 14px;
+	}
+
+	.lf-header__logo {
+		width: 40px;
+		height: 40px;
+	}
+
+	.lf-wrap .lf-header__title {
+		font-size: 20px;
+	}
+
+	.lf-welcome,
+	.lf-card {
+		padding: 16px;
+	}
+
+	.lf-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.lf-settings .form-table th {
+		width: auto;
+	}
+
+	.lf-status__table th[scope="row"] {
+		width: auto;
+	}
+}
+
+/* ==========================================================================
+   Phase 3 — Records (companies, contacts): lists, forms, profiles
+   ========================================================================== */
+
+.lf-wrap .lf-header__title {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+}
+
+.lf-muted {
+	color: var(--lf-text-muted);
+}
+
+.lf-breadcrumb {
+	margin: 4px 0 12px;
+}
+
+.lf-breadcrumb a {
+	text-decoration: none;
+}
+
+.lf-empty-text {
+	margin: 0;
+	color: var(--lf-text-muted);
+}
+
+.lf-count {
+	display: inline-block;
+	min-width: 20px;
+	margin-left: 4px;
+	padding: 0 7px;
+	border-radius: 999px;
+	background: #f0f0f1;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* Pills ------------------------------------------------------------------ */
+
+.lf-pill {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 999px;
+	background: #f0f0f1;
+	color: #3c434a;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1.6;
+	white-space: nowrap;
+}
+
+.lf-pill--prospect {
+	background: #eef2ff;
+	color: #3730a3;
+}
+
+.lf-pill--customer,
+.lf-pill--active {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-pill--partner {
+	background: #f3e8ff;
+	color: #6b21a8;
+}
+
+.lf-pill--inactive {
+	background: #f0f0f1;
+	color: #50575e;
+}
+
+.lf-pill--pinned {
+	background: var(--lf-warning-bg);
+	color: var(--lf-warning);
+}
+
+/* Avatars ---------------------------------------------------------------- */
+
+.lf-avatar {
+	--lf-avatar-hue: 240;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: hsl(var(--lf-avatar-hue) 60% 92%);
+	color: hsl(var(--lf-avatar-hue) 55% 28%);
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+.lf-avatar--sm {
+	width: 28px;
+	height: 28px;
+	font-size: 11px;
+}
+
+.lf-avatar--lg {
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	font-size: 17px;
+}
+
+/* List tables ------------------------------------------------------------ */
+
+.lf-list .wp-list-table .column-name {
+	width: 26%;
+}
+
+.lf-list .wp-list-table .column-status,
+.lf-list .wp-list-table .column-contacts {
+	width: 9%;
+}
+
+.lf-list .wp-list-table .column-created_at {
+	width: 10%;
+}
+
+.lf-cell-primary {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.lf-cell-subtitle {
+	display: block;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-filters select {
+	max-width: 200px;
+}
+
+/* Layout ----------------------------------------------------------------- */
+
+.lf-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 300px;
+	gap: var(--lf-gap);
+	align-items: start;
+	margin-top: 8px;
+}
+
+.lf-layout__main,
+.lf-layout__side {
+	display: grid;
+	gap: var(--lf-gap);
+	min-width: 0;
+}
+
+.lf-sticky {
+	position: sticky;
+	top: 46px;
+}
+
+.lf-card__header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 14px;
+}
+
+.lf-wrap .lf-card__title {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+/* Forms ------------------------------------------------------------------ */
+
+.lf-form-section {
+	margin: 0 0 24px;
+	padding: 0 0 20px;
+	border: 0;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.lf-form-section:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.lf-form-section__title {
+	margin-bottom: 4px;
+	padding: 0;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.lf-form-section__description {
+	margin: 0 0 12px;
+	color: var(--lf-text-muted);
+}
+
+.lf-form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px 20px;
+	margin-top: 12px;
+}
+
+.lf-field--full {
+	grid-column: 1 / -1;
+}
+
+.lf-field__label {
+	display: block;
+	margin-bottom: 6px;
+	font-weight: 600;
+}
+
+.lf-wrap .lf-field input[type="text"],
+.lf-wrap .lf-field input[type="email"],
+.lf-wrap .lf-field input[type="url"],
+.lf-wrap .lf-field input[type="tel"],
+.lf-wrap .lf-field input[type="search"],
+.lf-wrap .lf-field select,
+.lf-wrap .lf-field textarea {
+	width: 100%;
+	max-width: 100%;
+}
+
+.lf-required {
+	color: var(--lf-error);
+}
+
+.lf-field__description {
+	margin: 6px 0 0;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-field__error {
+	margin: 6px 0 0;
+	color: var(--lf-error);
+	font-weight: 600;
+}
+
+.lf-field--error input,
+.lf-field--error select,
+.lf-field--error textarea {
+	border-color: var(--lf-error);
+	box-shadow: 0 0 0 1px var(--lf-error);
+}
+
+.lf-record-search {
+	margin-bottom: 6px;
+}
+
+.lf-layout__side .lf-field {
+	margin-bottom: 16px;
+}
+
+.lf-form-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 16px;
+	padding-top: 16px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.lf-error-summary ul {
+	margin: 0 0 8px 18px;
+	list-style: disc;
+}
+
+.lf-error-summary:focus {
+	outline: 2px solid var(--lf-error);
+	outline-offset: 2px;
+}
+
+.lf-button-danger.button,
+.lf-link-danger {
+	color: var(--lf-error);
+}
+
+.lf-button-danger.button {
+	border-color: var(--lf-error);
+}
+
+.lf-button-danger.button:hover,
+.lf-button-danger.button:focus {
+	background: var(--lf-error-bg);
+	border-color: var(--lf-error);
+	color: var(--lf-error);
+}
+
+/* Profile ---------------------------------------------------------------- */
+
+.lf-details {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px 24px;
+	margin: 0;
+}
+
+.lf-details dt,
+.lf-meta dt {
+	margin: 0 0 2px;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.lf-details dd {
+	margin: 0;
+	word-break: break-word;
+}
+
+.lf-details__wide {
+	grid-column: 1 / -1;
+}
+
+.lf-details address {
+	font-style: normal;
+}
+
+.lf-details dd p:first-child {
+	margin-top: 0;
+}
+
+.lf-meta {
+	margin: 0;
+}
+
+.lf-meta dd {
+	margin: 0 0 14px;
+}
+
+.lf-meta dd:last-child {
+	margin-bottom: 0;
+}
+
+.lf-mini-table th[scope="row"] {
+	font-weight: 600;
+}
+
+.lf-stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	margin: 0;
+}
+
+.lf-stats li {
+	margin: 0;
+	color: var(--lf-text-muted);
+}
+
+.lf-stats__number {
+	display: block;
+	color: var(--lf-text);
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.lf-company-card {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 12px 0 14px;
+}
+
+/* Notes ------------------------------------------------------------------ */
+
+.lf-note-form {
+	margin-bottom: 16px;
+}
+
+.lf-note-form__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+.lf-note-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lf-note {
+	display: flex;
+	gap: 12px;
+	margin: 0;
+	padding: 14px 0;
+	border-top: 1px solid #f0f0f1;
+}
+
+.lf-note--pinned {
+	margin: 0 -12px;
+	padding: 14px 12px;
+	border-radius: 8px;
+	background: #fffbeb;
+}
+
+.lf-note__body {
+	flex: 1;
+	min-width: 0;
+}
+
+.lf-note__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	margin: 0 0 4px;
+	font-size: 12px;
+}
+
+.lf-note__meta time {
+	color: var(--lf-text-muted);
+}
+
+.lf-note__content {
+	word-break: break-word;
+}
+
+.lf-note__content p {
+	margin: 0 0 8px;
+}
+
+.lf-note__actions {
+	display: flex;
+	gap: 12px;
+}
+
+.lf-note__actions form {
+	margin: 0;
+}
+
+/* Dashboard widget --------------------------------------------------------- */
+
+.lf-widget__total {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	margin: 0 0 12px;
+}
+
+.lf-widget__number {
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.lf-widget__label {
+	color: var(--lf-text-muted);
+}
+
+.lf-widget__statuses {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 0 0 14px;
+}
+
+.lf-widget__statuses li {
+	margin: 0;
+}
+
+.lf-widget__statuses a {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	text-decoration: none;
+}
+
+.lf-widget__count {
+	color: var(--lf-text-muted);
+	font-weight: 600;
+}
+
+.lf-wrap .lf-widget__subtitle {
+	margin: 0 0 8px;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.lf-widget__recent {
+	margin: 0 0 14px;
+}
+
+.lf-widget__recent li {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 8px;
+}
+
+.lf-widget__recent time {
+	margin-left: auto;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.lf-widget__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0;
+}
+
+@media screen and (max-width: 1100px) {
+	.lf-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.lf-sticky {
+		position: static;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	.lf-filters select {
+		max-width: 100%;
+	}
+
+	.lf-list .wp-list-table .column-name {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.lf-form-grid,
+	.lf-details {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (forced-colors: active) {
+	.lf-pill,
+	.lf-avatar {
+		border: 1px solid CanvasText;
+	}
+}
+
+/* ==========================================================================
+   Phase 4 — Leads & pipeline
+   ========================================================================== */
+
+.lf-stage {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	white-space: nowrap;
+}
+
+.lf-stage__dot {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	flex: 0 0 auto;
+}
+
+.lf-pill--open {
+	background: #eef2ff;
+	color: #3730a3;
+}
+
+.lf-pill--won {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-pill--lost {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+}
+
+.lf-overdue {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px;
+}
+
+.lf-bulk-assign {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.lf-bulk-assign__hint {
+	margin: 0;
+	font-size: 12px;
+}
+
+/* Board ------------------------------------------------------------------ */
+
+.lf-pipeline.lf-wrap {
+	max-width: none;
+}
+
+.lf-board-filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 12px 0 16px;
+}
+
+.lf-board {
+	display: grid;
+	grid-auto-columns: minmax(260px, 1fr);
+	grid-auto-flow: column;
+	gap: 14px;
+	align-items: start;
+	padding-bottom: 12px;
+	overflow-x: auto;
+	scroll-snap-type: x proximity;
+}
+
+.lf-column {
+	display: flex;
+	flex-direction: column;
+	min-width: 260px;
+	max-height: calc(100vh - 220px);
+	border-radius: var(--lf-radius);
+	background: #f6f7f7;
+	border: 1px solid var(--lf-border);
+	border-top: 4px solid var(--lf-stage-color, #64748b);
+	scroll-snap-align: start;
+}
+
+.lf-column__header {
+	padding: 12px 14px 8px;
+}
+
+.lf-wrap .lf-column__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.lf-column__value {
+	margin: 2px 0 0;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.lf-column__cards {
+	flex: 1;
+	min-height: 60px;
+	margin: 0;
+	padding: 4px 10px 10px;
+	overflow-y: auto;
+	list-style: none;
+}
+
+.lf-column.is-drop-target .lf-column__cards {
+	background: color-mix(in srgb, var(--lf-stage-color, #64748b) 10%, transparent);
+	outline: 2px dashed var(--lf-stage-color, #64748b);
+	outline-offset: -4px;
+	border-radius: 8px;
+}
+
+.lf-column__empty {
+	margin: 6px 0;
+	padding: 18px 8px;
+	border: 1px dashed #c3c4c7;
+	border-radius: 8px;
+	color: var(--lf-text-muted);
+	text-align: center;
+}
+
+.lf-column__more,
+.lf-column__add {
+	margin: 0;
+	padding: 8px 14px 12px;
+}
+
+.lf-column__add {
+	display: block;
+	color: var(--lf-text-muted);
+	text-decoration: none;
+}
+
+.lf-column__add:hover,
+.lf-column__add:focus {
+	color: var(--lf-brand-strong);
+}
+
+.lf-deal {
+	position: relative;
+	margin: 0 0 8px;
+	padding: 10px 12px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	background: var(--lf-surface);
+	box-shadow: var(--lf-shadow);
+}
+
+.lf-deal.is-movable {
+	cursor: grab;
+}
+
+.lf-deal.is-dragging {
+	opacity: 0.45;
+	cursor: grabbing;
+}
+
+.lf-deal.is-saving {
+	opacity: 0.7;
+}
+
+.lf-deal.is-saving::after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 12px;
+	height: 12px;
+	border: 2px solid var(--lf-brand);
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation: lf-spin 0.8s linear infinite;
+}
+
+@keyframes lf-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.lf-deal__title {
+	display: block;
+	padding-right: 16px;
+	font-weight: 600;
+	text-decoration: none;
+	word-break: break-word;
+}
+
+.lf-deal__company {
+	display: block;
+	margin-top: 2px;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-deal__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+.lf-deal__date {
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+	color: var(--lf-text-muted);
+}
+
+.lf-deal__date .dashicons {
+	width: 14px;
+	height: 14px;
+	font-size: 14px;
+}
+
+.lf-deal__date.is-overdue {
+	color: var(--lf-error);
+	font-weight: 600;
+}
+
+.lf-deal__owner {
+	margin-left: auto;
+}
+
+.lf-deal__move {
+	display: flex;
+	gap: 4px;
+	margin-top: 8px;
+}
+
+.lf-deal__move select {
+	flex: 1;
+	min-width: 0;
+	min-height: 28px;
+	font-size: 12px;
+}
+
+/* Stage bar (lead screen) ---------------------------------------------- */
+
+.lf-stagebar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: var(--lf-gap);
+	padding: 12px;
+}
+
+.lf-stagebar__steps {
+	display: flex;
+	flex: 1 1 520px;
+	gap: 4px;
+	margin: 0;
+	list-style: none;
+}
+
+.lf-stagebar__step {
+	flex: 1;
+	margin: 0;
+}
+
+.lf-stagebar__step form {
+	margin: 0;
+}
+
+.lf-stagebar__button,
+.lf-stagebar__label {
+	display: block;
+	width: 100%;
+	padding: 8px 10px;
+	border: 0;
+	border-radius: 6px;
+	background: #f0f0f1;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.lf-stagebar__button {
+	cursor: pointer;
+}
+
+.lf-stagebar__button:hover,
+.lf-stagebar__button:focus-visible {
+	background: #e0e0e2;
+	color: var(--lf-text);
+}
+
+.lf-stagebar__step.is-done .lf-stagebar__button,
+.lf-stagebar__step.is-done .lf-stagebar__label {
+	background: color-mix(in srgb, var(--lf-stage-color) 18%, #fff);
+	color: var(--lf-text);
+}
+
+.lf-stagebar__step.is-current .lf-stagebar__label {
+	background: var(--lf-stage-color);
+	color: #fff;
+}
+
+.lf-stagebar__outcomes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.lf-stagebar__outcomes form {
+	margin: 0;
+}
+
+.lf-stagebar__outcome.is-won.button {
+	border-color: var(--lf-ok);
+	color: var(--lf-ok);
+}
+
+.lf-stagebar__outcome.is-lost.button {
+	border-color: var(--lf-error);
+	color: var(--lf-error);
+}
+
+span.lf-stagebar__outcome.is-current {
+	padding: 6px 12px;
+	border-radius: 6px;
+	font-weight: 600;
+}
+
+span.lf-stagebar__outcome.is-won {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+span.lf-stagebar__outcome.is-lost {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+}
+
+.lf-assign {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.lf-assign select {
+	flex: 1;
+	min-width: 140px;
+}
+
+/* Stage editor ----------------------------------------------------------- */
+
+.lf-stages__intro {
+	max-width: 760px;
+	color: var(--lf-text-muted);
+}
+
+.lf-stages__table td {
+	vertical-align: middle;
+}
+
+.lf-stages__order {
+	width: 80px;
+	white-space: nowrap;
+}
+
+.lf-stages__slug {
+	display: block;
+	margin-top: 4px;
+	background: transparent;
+	color: var(--lf-text-muted);
+	font-size: 11px;
+}
+
+.lf-stages__table input[type="color"] {
+	width: 44px;
+	height: 30px;
+	padding: 2px;
+}
+
+.lf-stages__delete {
+	white-space: nowrap;
+}
+
+.lf-stages__new td {
+	background: #f6f7f7;
+}
+
+/* Pipeline widget -------------------------------------------------------- */
+
+.lf-pipeline-bars {
+	width: 100%;
+	margin-bottom: 14px;
+	border-collapse: collapse;
+}
+
+.lf-pipeline-bars th,
+.lf-pipeline-bars td {
+	padding: 5px 8px 5px 0;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.lf-pipeline-bars th {
+	width: 22%;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.lf-pipeline-bars__bar {
+	position: relative;
+	width: 58%;
+}
+
+.lf-pipeline-bars__fill {
+	display: inline-block;
+	min-width: 3px;
+	height: 12px;
+	margin-right: 6px;
+	border-radius: 6px;
+	vertical-align: middle;
+}
+
+.lf-pipeline-bars__count {
+	font-weight: 600;
+}
+
+.lf-pipeline-bars__value {
+	color: var(--lf-text-muted);
+	text-align: right !important;
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 782px) {
+	.lf-board {
+		grid-auto-columns: 85%;
+	}
+
+	.lf-column {
+		max-height: none;
+	}
+
+	.lf-stagebar__steps {
+		flex-wrap: wrap;
+	}
+
+	.lf-stagebar__step {
+		flex: 1 1 40%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lf-deal.is-saving::after {
+		animation: none;
+	}
+}
+
+/* ==========================================================================
+   Phase 5 — Tasks, activities, follow-ups
+   ========================================================================== */
+
+.lf-pill--overdue {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+	text-decoration: none;
+}
+
+.lf-pill--pending,
+.lf-pill--scheduled {
+	background: #eef2ff;
+	color: #3730a3;
+}
+
+.lf-pill--in_progress {
+	background: var(--lf-warning-bg);
+	color: var(--lf-warning);
+}
+
+.lf-pill--completed {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-pill--cancelled,
+.lf-pill--missed {
+	background: #f0f0f1;
+	color: #50575e;
+}
+
+.lf-pill--priority-high {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+}
+
+.lf-pill--priority-normal {
+	background: #f0f0f1;
+	color: #3c434a;
+}
+
+.lf-pill--priority-low {
+	background: #f6f7f7;
+	color: #646970;
+}
+
+.lf-panel-toolbar {
+	margin: 0 0 12px;
+}
+
+.lf-wrap .lf-subheading {
+	margin: 18px 0 8px;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+/* Record tabs -------------------------------------------------------------- */
+
+.lf-record-tabs {
+	padding-top: 0;
+}
+
+.lf-record-tabs__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+	margin: 0 -20px 18px;
+	padding: 0 12px;
+	border-bottom: 1px solid var(--lf-border);
+	overflow-x: auto;
+}
+
+.lf-record-tabs__tab {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: -1px;
+	padding: 12px 12px 10px;
+	border: 0;
+	border-bottom: 3px solid transparent;
+	background: none;
+	color: var(--lf-text-muted);
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.lf-record-tabs__tab:hover {
+	color: var(--lf-text);
+}
+
+.lf-record-tabs__tab[aria-selected="true"] {
+	border-bottom-color: var(--lf-brand);
+	color: var(--lf-brand-strong);
+}
+
+.lf-record-tabs__panel + .lf-record-tabs__panel {
+	margin-top: 24px;
+	padding-top: 16px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.lf-record-tabs.is-enhanced .lf-record-tabs__panel + .lf-record-tabs__panel {
+	margin-top: 0;
+	padding-top: 0;
+	border-top: 0;
+}
+
+.lf-record-tabs.is-enhanced .lf-record-tabs__heading {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+.lf-wrap .lf-record-tabs__heading {
+	margin: 0 0 12px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.lf-record-tabs__panel:focus-visible {
+	outline: 2px solid var(--lf-brand);
+	outline-offset: 4px;
+}
+
+/* Timeline ----------------------------------------------------------------- */
+
+.lf-log-activity {
+	margin-bottom: 18px;
+	padding: 12px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	background: #f6f7f7;
+}
+
+.lf-log-activity__row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+
+.lf-log-activity__row label {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: 600;
+}
+
+.lf-log-activity__actions {
+	margin: 8px 0 0;
+}
+
+.lf-timeline {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lf-timeline::before {
+	content: "";
+	position: absolute;
+	top: 6px;
+	bottom: 6px;
+	left: 15px;
+	width: 2px;
+	background: #f0f0f1;
+}
+
+.lf-activity {
+	position: relative;
+	display: flex;
+	gap: 12px;
+	margin: 0;
+	padding: 0 0 16px;
+}
+
+.lf-activity.is-new {
+	animation: lf-flash 1.6s ease-out;
+}
+
+@keyframes lf-flash {
+	from {
+		background: var(--lf-brand-soft);
+	}
+
+	to {
+		background: transparent;
+	}
+}
+
+.lf-activity__icon {
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 32px;
+	height: 32px;
+	border: 2px solid var(--lf-surface);
+	border-radius: 50%;
+	background: #f0f0f1;
+	color: #50575e;
+}
+
+.lf-activity__icon .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+}
+
+.lf-activity--call .lf-activity__icon,
+.lf-activity--email .lf-activity__icon,
+.lf-activity--meeting .lf-activity__icon {
+	background: var(--lf-brand-soft);
+	color: var(--lf-brand-strong);
+}
+
+.lf-activity--status_change .lf-activity__icon {
+	background: #f3e8ff;
+	color: #6b21a8;
+}
+
+.lf-activity--task .lf-activity__icon {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-activity--follow_up .lf-activity__icon {
+	background: var(--lf-warning-bg);
+	color: var(--lf-warning);
+}
+
+.lf-activity__body {
+	flex: 1;
+	min-width: 0;
+	padding-top: 5px;
+}
+
+.lf-activity__subject,
+.lf-activity__meta {
+	margin: 0;
+}
+
+.lf-activity__meta {
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-activity__description {
+	margin: 4px 0;
+	word-break: break-word;
+}
+
+.lf-activity__description p {
+	margin: 0 0 4px;
+}
+
+.lf-timeline--compact .lf-activity {
+	padding-bottom: 10px;
+}
+
+.lf-timeline__more {
+	margin: 4px 0 0 44px;
+}
+
+/* Tasks ---------------------------------------------------------------------- */
+
+.lf-list .wp-list-table .column-done {
+	width: 32px;
+	text-align: center;
+}
+
+.lf-list .wp-list-table tr.is-overdue {
+	box-shadow: inset 3px 0 0 var(--lf-error);
+}
+
+.lf-list .wp-list-table tr.is-completed .row-title,
+.lf-task.is-completed .lf-task__title {
+	color: var(--lf-text-muted);
+	text-decoration: line-through;
+}
+
+.lf-task-toggle {
+	width: 18px;
+	height: 18px;
+	margin: 0;
+	cursor: pointer;
+}
+
+.lf-task-toggle[aria-busy="true"] {
+	opacity: 0.5;
+}
+
+.lf-task-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lf-task {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin: 0;
+	padding: 10px 0;
+	border-top: 1px solid #f0f0f1;
+}
+
+.lf-task:first-child {
+	border-top: 0;
+}
+
+.lf-task .lf-task-toggle {
+	margin-top: 2px;
+}
+
+.lf-task.is-overdue {
+	margin: 0 -8px;
+	padding: 10px 8px;
+	border-radius: 6px;
+	background: var(--lf-error-bg);
+}
+
+.lf-task__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.lf-task__title {
+	font-weight: 600;
+	text-decoration: none;
+	word-break: break-word;
+}
+
+.lf-task__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-quick-task {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 10px;
+	margin-bottom: 16px;
+	padding: 12px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	background: #f6f7f7;
+}
+
+.lf-quick-task label {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: 600;
+}
+
+.lf-quick-task__title {
+	flex: 1 1 240px;
+}
+
+.lf-quick-task__title input {
+	width: 100%;
+}
+
+.lf-task-complete label {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 600;
+}
+
+/* Follow-ups ------------------------------------------------------------- */
+
+.lf-schedule {
+	margin-bottom: 12px;
+}
+
+.lf-schedule summary {
+	display: inline-block;
+	list-style: none;
+}
+
+.lf-schedule summary::-webkit-details-marker {
+	display: none;
+}
+
+.lf-schedule__form {
+	margin-top: 12px;
+	padding: 12px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	background: #f6f7f7;
+}
+
+.lf-follow-up-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lf-follow-up {
+	display: flex;
+	gap: 12px;
+	margin: 0;
+	padding: 12px 0;
+	border-top: 1px solid #f0f0f1;
+}
+
+.lf-follow-up:first-child {
+	border-top: 0;
+}
+
+.lf-follow-up.is-completed,
+.lf-follow-up.is-cancelled {
+	opacity: 0.8;
+}
+
+.lf-follow-up__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	background: var(--lf-warning-bg);
+	color: var(--lf-warning);
+}
+
+.lf-follow-up.is-overdue .lf-follow-up__icon {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+}
+
+.lf-follow-up__body {
+	flex: 1;
+	min-width: 0;
+}
+
+.lf-follow-up__subject,
+.lf-follow-up__meta,
+.lf-follow-up__outcome {
+	margin: 0 0 2px;
+}
+
+.lf-follow-up__meta {
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-follow-up__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin-top: 8px;
+}
+
+.lf-follow-up__actions form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 0;
+}
+
+.lf-due-list {
+	margin: 0;
+}
+
+.lf-due-list li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 10px;
+	margin: 0;
+	padding: 8px 0;
+	border-top: 1px solid #f0f0f1;
+}
+
+.lf-due-list li:first-child {
+	border-top: 0;
+}
+
+.lf-due-list__when {
+	min-width: 140px;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.lf-due-list li.is-overdue .lf-due-list__when {
+	color: var(--lf-error);
+}
+
+@media screen and (max-width: 782px) {
+	.lf-record-tabs__list {
+		margin: 0 -16px 16px;
+		flex-wrap: nowrap;
+	}
+
+	.lf-quick-task > div {
+		flex: 1 1 100%;
+	}
+
+	.lf-quick-task input,
+	.lf-quick-task select {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lf-activity.is-new {
+		animation: none;
+	}
+}
+
+/* ==========================================================================
+   Phase 6 — Email templates, import & export
+   ========================================================================== */
+
+.lf-placeholder-list {
+	display: grid;
+	gap: 4px;
+	margin: 0 0 8px;
+}
+
+.lf-placeholder-list li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+}
+
+.lf-placeholder {
+	padding: 0;
+	border: 0;
+	background: none;
+	cursor: pointer;
+}
+
+.lf-placeholder code {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 4px;
+	background: var(--lf-brand-soft);
+	color: var(--lf-brand-strong);
+	font-size: 12px;
+}
+
+.lf-placeholder:hover code,
+.lf-placeholder:focus-visible code {
+	background: var(--lf-brand);
+	color: #fff;
+}
+
+.lf-placeholder-list__label {
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-template-preview label {
+	display: inline-block;
+	margin-bottom: 4px;
+	font-weight: 600;
+}
+
+.lf-template-preview select {
+	max-width: 100%;
+}
+
+.lf-email-preview {
+	margin-top: 12px;
+	padding: 16px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.lf-email-preview__subject {
+	margin: 0 0 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.lf-email-preview__body {
+	word-break: break-word;
+}
+
+.lf-template-source {
+	max-height: 320px;
+	overflow: auto;
+	padding: 12px;
+	border-radius: 6px;
+	background: #f6f7f7;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.lf-wrap #lf-field-body {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 13px;
+}
+
+/* Import ---------------------------------------------------------------------- */
+
+.lf-steps {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 20px;
+	margin: 0 0 20px;
+	padding: 0 0 16px;
+	border-bottom: 1px solid #f0f0f1;
+	list-style: none;
+}
+
+.lf-steps__item {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	color: var(--lf-text-muted);
+}
+
+.lf-steps__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: #f0f0f1;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.lf-steps__item.is-current {
+	color: var(--lf-text);
+	font-weight: 600;
+}
+
+.lf-steps__item.is-current .lf-steps__number {
+	background: var(--lf-brand);
+	color: #fff;
+}
+
+.lf-steps__item.is-done .lf-steps__number {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-choice-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.lf-choice {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.lf-choice:has(input:checked) {
+	border-color: var(--lf-brand);
+	background: var(--lf-brand-soft);
+}
+
+.lf-mapping th[scope="row"] {
+	width: 25%;
+	font-weight: 600;
+}
+
+.lf-mapping__samples code {
+	display: inline-block;
+	margin: 0 4px 4px 0;
+	font-size: 12px;
+}
+
+.lf-mapping select.is-skipped {
+	color: var(--lf-text-muted);
+}
+
+.lf-import-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin: 0 0 16px;
+}
+
+.lf-import-stats li {
+	min-width: 120px;
+	margin: 0;
+	padding: 12px 16px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	color: var(--lf-text-muted);
+}
+
+.lf-import-stats li.has-errors {
+	border-color: var(--lf-error);
+	background: var(--lf-error-bg);
+}
+
+.lf-import-stats__number {
+	display: block;
+	color: var(--lf-text);
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.lf-table-scroll {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.lf-preview-table tr.is-error {
+	box-shadow: inset 3px 0 0 var(--lf-error);
+}
+
+.lf-preview-values {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 14px;
+	margin: 0;
+}
+
+.lf-preview-values dt {
+	color: var(--lf-text-muted);
+	font-size: 11px;
+}
+
+.lf-preview-values dd {
+	margin: 0;
+}
+
+.lf-messages {
+	margin: 0;
+	padding-left: 16px;
+	list-style: disc;
+}
+
+.lf-import-errors {
+	margin: 16px 0;
+}
+
+.lf-import-progress progress {
+	width: 100%;
+	height: 16px;
+}
+
+.lf-form-actions form {
+	display: inline-block;
+	margin: 0;
+}
+
+.lf-export-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 16px;
+}
+
+.lf-export-card {
+	padding: 16px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+}
+
+.lf-export-card .button .dashicons {
+	margin: 4px 4px 0 -2px;
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+/* ==========================================================================
+   Phase 7 — Email sending
+   ========================================================================== */
+
+.lf-pill--sent {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-pill--failed {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+}
+
+.lf-compose__template {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	margin-bottom: 16px;
+}
+
+.lf-compose__template label {
+	font-weight: 600;
+}
+
+.lf-compose__template select {
+	min-width: 220px;
+	max-width: 100%;
+}
+
+.lf-compose__copies > summary {
+	cursor: pointer;
+	color: var(--lf-brand-strong);
+	font-weight: 600;
+}
+
+.lf-compose__copies > .lf-form-grid {
+	margin-top: 8px;
+}
+
+.lf-wrap.lf-compose #lf-field-body {
+	font-family: inherit;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.lf-compose .lf-form-actions .button .dashicons,
+.lf-emails .button .dashicons {
+	margin: 4px 2px 0 -2px;
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.lf-compose .button-large .dashicons {
+	margin-top: 7px;
+}
+
+.lf-email-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lf-email-item {
+	margin: 0;
+	border-top: 1px solid #f0f0f1;
+}
+
+.lf-email-item:first-child {
+	border-top: 0;
+}
+
+.lf-email-item summary {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 12px 0;
+	list-style: none;
+	cursor: pointer;
+}
+
+.lf-email-item summary::-webkit-details-marker {
+	display: none;
+}
+
+.lf-email-item summary:focus-visible {
+	outline: 2px solid var(--lf-brand);
+	outline-offset: 2px;
+}
+
+.lf-email-item summary > .dashicons {
+	flex: 0 0 auto;
+	margin-top: 2px;
+	color: var(--lf-brand);
+}
+
+.lf-email-item.is-failed summary > .dashicons {
+	color: var(--lf-error);
+}
+
+.lf-email-item__main {
+	flex: 1;
+	min-width: 0;
+}
+
+.lf-email-item__subject,
+.lf-email-item__meta {
+	display: block;
+	overflow-wrap: anywhere;
+}
+
+.lf-email-item__meta,
+.lf-email-item__time {
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-email-item__time {
+	flex: 0 0 auto;
+	white-space: nowrap;
+}
+
+.lf-email-item__body {
+	margin: 0 0 12px 30px;
+	padding: 12px 16px;
+	border: 1px solid var(--lf-border);
+	border-radius: 8px;
+	background: #fff;
+}
+
+.lf-email-item__actions {
+	display: flex;
+	gap: 16px;
+	margin: 12px 0 0;
+}
+
+.lf-inline-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+@media screen and (max-width: 600px) {
+	.lf-email-item summary {
+		flex-wrap: wrap;
+	}
+
+	.lf-email-item__time {
+		margin-left: 30px;
+	}
+
+	.lf-email-item__body {
+		margin-left: 0;
+	}
+}
+
+/* ==========================================================================
+   Phase 8 — Analytics dashboard
+   ========================================================================== */
+
+.lf-dashboard-filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 12px 16px;
+	margin-top: 16px;
+	padding: 14px 16px;
+}
+
+.lf-dashboard-filters__field {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 8px;
+}
+
+.lf-dashboard-filters__field label {
+	font-weight: 600;
+}
+
+.lf-dashboard-filters__dates[hidden] {
+	display: none;
+}
+
+.lf-dashboard-filters__summary {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	margin: 0 0 0 auto;
+	color: var(--lf-text-muted);
+}
+
+.lf-kpis {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 16px;
+	margin: var(--lf-gap) 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lf-kpi {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin: 0;
+	padding: 16px;
+	border: 1px solid var(--lf-border);
+	border-top: 3px solid var(--lf-brand);
+	border-radius: var(--lf-radius);
+	background: var(--lf-surface);
+	box-shadow: var(--lf-shadow);
+}
+
+.lf-kpi--ok {
+	border-top-color: var(--lf-ok);
+}
+
+.lf-kpi--error {
+	border-top-color: var(--lf-error);
+}
+
+.lf-kpi--warning {
+	border-top-color: #dba617;
+}
+
+.lf-kpi__label {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	color: var(--lf-text-muted);
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.lf-kpi__label .dashicons {
+	width: 18px;
+	height: 18px;
+	font-size: 18px;
+	color: var(--lf-brand);
+}
+
+.lf-kpi--ok .lf-kpi__label .dashicons {
+	color: var(--lf-ok);
+}
+
+.lf-kpi--error .lf-kpi__label .dashicons {
+	color: var(--lf-error);
+}
+
+.lf-kpi__value {
+	margin: 0;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 1.15;
+	overflow-wrap: anywhere;
+}
+
+.lf-kpi__value a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.lf-kpi__value a:hover,
+.lf-kpi__value a:focus {
+	color: var(--lf-brand-strong);
+	text-decoration: underline;
+}
+
+.lf-kpi__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px 8px;
+	margin: auto 0 0;
+	font-size: 12px;
+	color: var(--lf-text-muted);
+}
+
+.lf-trend {
+	display: inline-flex;
+	align-items: center;
+	padding: 1px 6px 1px 2px;
+	border-radius: 999px;
+	font-weight: 600;
+}
+
+.lf-trend .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+}
+
+.lf-trend.is-good {
+	background: var(--lf-ok-bg);
+	color: var(--lf-ok);
+}
+
+.lf-trend.is-bad {
+	background: var(--lf-error-bg);
+	color: var(--lf-error);
+}
+
+.lf-trend--flat {
+	background: #f0f0f1 !important;
+	color: var(--lf-text-muted) !important;
+}
+
+.lf-charts {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--lf-gap);
+	margin-top: var(--lf-gap);
+}
+
+.lf-chart {
+	min-width: 0;
+	margin: 0;
+}
+
+.lf-chart--wide {
+	grid-column: 1 / -1;
+}
+
+.lf-chart__caption {
+	margin-bottom: 12px;
+}
+
+.lf-wrap .lf-chart__caption .lf-card__title {
+	margin: 0;
+	font-size: 15px;
+}
+
+.lf-chart__description {
+	margin: 2px 0 0;
+	color: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+.lf-chart__canvas {
+	position: relative;
+	min-height: 40px;
+}
+
+.lf-chart__svg {
+	display: block;
+	overflow: visible;
+}
+
+.lf-chart__grid line {
+	stroke: #f0f0f1;
+}
+
+.lf-chart__grid text,
+.lf-chart__labels text {
+	fill: var(--lf-text-muted);
+	font-size: 11px;
+}
+
+.lf-chart__mark {
+	cursor: pointer;
+	transition: opacity 0.15s ease;
+}
+
+.lf-chart__mark:hover,
+.lf-chart__mark:focus {
+	opacity: 0.8;
+	outline: none;
+}
+
+.lf-chart__mark:focus-visible {
+	stroke: var(--lf-text);
+	stroke-width: 2;
+}
+
+.lf-chart__bars rect {
+	transform-box: fill-box;
+	transform-origin: bottom;
+	animation: lf-chart-grow 0.5s ease-out;
+}
+
+.lf-chart__center-value {
+	fill: var(--lf-text);
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.lf-chart__center-label {
+	fill: var(--lf-text-muted);
+	font-size: 12px;
+}
+
+@keyframes lf-chart-grow {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lf-chart__bars rect {
+		animation: none;
+	}
+}
+
+.lf-chart__tooltip {
+	position: absolute;
+	z-index: 5;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	max-width: 240px;
+	padding: 6px 10px;
+	border-radius: 6px;
+	background: #1d2327;
+	color: #fff;
+	font-size: 12px;
+	line-height: 1.4;
+	pointer-events: none;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lf-chart__tooltip[hidden] {
+	display: none;
+}
+
+.lf-chart__legend {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 6px 16px;
+	margin: 10px 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+}
+
+.lf-chart__legend li {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+}
+
+.lf-chart__swatch {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 3px;
+}
+
+.lf-chart__swatch.is-line {
+	height: 3px;
+	border-radius: 2px;
+}
+
+.lf-chart__legend-value {
+	color: var(--lf-text-muted);
+}
+
+.lf-chart__empty {
+	margin: 24px 0;
+	color: var(--lf-text-muted);
+	text-align: center;
+}
+
+.lf-chart__data {
+	margin-top: 12px;
+}
+
+.lf-chart__data summary {
+	cursor: pointer;
+	color: var(--lf-brand-strong);
+	font-size: 12px;
+}
+
+.lf-chart__data table {
+	margin-top: 8px;
+}
+
+.lf-wrap .lf-dashboard__heading {
+	margin: 32px 0 0;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 1280px) {
+	.lf-kpis {
+		grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.lf-charts {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.lf-dashboard-filters__summary {
+		margin-left: 0;
+		flex-basis: 100%;
+	}
+}
+
+/* ==========================================================================
+   Phase 9 — Access control
+   ========================================================================== */
+
+.lf-access .lf-card + .lf-card {
+	margin-top: var(--lf-gap);
+}
+
+.lf-access .lf-tabs + .lf-card {
+	margin-top: 16px;
+}
+
+.lf-permissions__table th[scope="row"] {
+	font-weight: 400;
+}
+
+.lf-permissions__cap {
+	display: block;
+	margin-top: 2px;
+	color: var(--lf-text-muted);
+	font-size: 11px;
+	background: none;
+	padding: 0;
+}
+
+.lf-permissions__role {
+	min-width: 96px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.lf-permissions__cell {
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.lf-permissions__cell.is-changed {
+	background: var(--lf-brand-soft);
+}
+
+.lf-permissions__changed {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--lf-brand);
+}
+
+.lf-permissions__group th {
+	padding-top: 14px;
+	background: #f6f7f7;
+	font-weight: 600;
+}
+
+.lf-permissions__group .lf-muted {
+	margin-left: 8px;
+	font-weight: 400;
+}
+
+.lf-permissions__reset {
+	margin-top: 8px;
+}
+
+.lf-code {
+	overflow-x: auto;
+	padding: 12px;
+	border-radius: 6px;
+	background: #1d2327;
+	color: #f0f0f1;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.lf-code code {
+	background: none;
+	color: inherit;
+	padding: 0;
+}
+/* ==========================================================================
+   Phase 10 — Polish: empty states, busy buttons, logs, status actions
+   ========================================================================== */
+
+.lf-empty-state {
+	padding: 24px 12px;
+	text-align: center;
+}
+
+.lf-empty-state .dashicons {
+	width: 32px;
+	height: 32px;
+	font-size: 32px;
+	color: var(--lf-brand);
+	opacity: 0.6;
+}
+
+.lf-empty-state__text {
+	margin: 8px 0 12px;
+	color: var(--lf-text-muted);
+}
+
+.lf-wrap .button[aria-busy="true"],
+.lf-wrap .button.is-busy {
+	opacity: 0.75;
+	cursor: progress;
+}
+
+.lf-wrap .button.is-busy::before {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 6px;
+	border: 2px solid currentColor;
+	border-right-color: transparent;
+	border-radius: 50%;
+	vertical-align: -1px;
+	animation: lf-spin 0.8s linear infinite;
+}
+
+@keyframes lf-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lf-wrap .button.is-busy::before {
+		animation-duration: 3s;
+	}
+}
+
+.lf-status__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+.lf-status__actions form {
+	margin: 0;
+}
+
+.lf-log {
+	max-height: 320px;
+	overflow: auto;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.lf-log:focus-visible,
+.lf-wrap a:focus-visible,
+.lf-wrap button:focus-visible,
+.lf-wrap [tabindex]:focus-visible {
+	outline: 2px solid var(--lf-brand);
+	outline-offset: 1px;
+}
+
+.lf-settings hr {
+	margin: 24px 0;
+	border: 0;
+	border-top: 1px solid var(--lf-border);
+}
+
+@media screen and (max-width: 782px) {
+	.lf-dashboard-filters,
+	.lf-inline-form {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.lf-dashboard-filters__field {
+		justify-content: space-between;
+	}
+
+	.lf-wrap .lf-header__actions .button {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.lf-permissions__role {
+		min-width: 72px;
+		font-size: 11px;
+	}
+}
