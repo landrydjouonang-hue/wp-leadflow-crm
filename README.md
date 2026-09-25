@@ -8,8 +8,7 @@ REST API — with no external services and no runtime dependencies.
 
 By Djouonang Landry · GPL-2.0-or-later · Requires WordPress 6.4+ and PHP 8.0+
 
-<!-- Replace OWNER/REPO once the repository is published. -->
-<!-- ![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg) -->
+
 
 ---
 
@@ -28,22 +27,7 @@ By Djouonang Landry · GPL-2.0-or-later · Requires WordPress 6.4+ and PHP 8.0+
 | **REST API** | CRUD for leads, companies, contacts, tasks and activities with schema-driven validation, permission callbacks, paging, filters and Application Password authentication. |
 | **Operations** | Data-retention policies, a private debug log, a system status report, contextual help on every screen, and clean activation, upgrade, deactivation and uninstall handling. |
 
-## Screenshots
 
-![Analytics dashboard](.github/screenshots/dashboard.png)
-*Dashboard — KPIs, five charts and your own work, filtered by period and owner.*
-
-| Sales pipeline | Lead record |
-|---|---|
-| [![Pipeline board](.github/screenshots/pipeline.png)](.github/screenshots/pipeline.png) | [![Lead record](.github/screenshots/lead-profile.png)](.github/screenshots/lead-profile.png) |
-| Drag cards between stages, or move them from the keyboard. | Details, stage bar, activity, tasks, emails, follow-ups and notes. |
-
-| Access control | Send email |
-|---|---|
-| [![Access control](.github/screenshots/access-control.png)](.github/screenshots/access-control.png) | [![Compose email](.github/screenshots/compose-email.png)](.github/screenshots/compose-email.png) |
-| Every capability, every role, in one matrix. | Templates, placeholders and a live preview of the message. |
-
-More: [all fourteen screens with captions](docs/SCREENSHOTS.md).
 
 ## Install
 
@@ -82,27 +66,11 @@ Demo data and the screenshot pipeline live in
 [.github/demo/](.github/demo/README.md); 
 
 
-## The REST API in one example
 
-```bash
-curl -u "jane:APPLICATION PASSWORD" -H "Content-Type: application/json" \
-  -d '{"title":"Website redesign","amount":12000,"company_id":7}' \
-  https://example.com/wp-json/leadflow-crm/v1/leads
-```
 
 Responses follow WordPress conventions: `201 Created` with a `Location`
 header, paging headers, `_links` to related records, and field-level
 validation errors.
-
-## Development
-
-```bash
-composer install     # development tools only
-composer lint        # php -l over every file
-composer phpcs       # WordPress Coding Standards
-```
-
-
 
 ## Roadmap
 
