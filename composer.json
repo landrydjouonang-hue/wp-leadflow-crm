@@ -1,0 +1,30 @@
+{
+	"name": "djouonanglandry/wp-leadflow-crm",
+	"description": "WordPress CRM and lead management: leads, pipeline, companies, contacts, tasks, follow-ups, email and a REST API.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Djouonang Landry"
+		}
+	],
+	"require": {
+		"php": ">=8.0"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.9",
+		"wp-coding-standards/wpcs": "^3.1",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"lint": "find src views -name '*.php' -print0 | xargs -0 -n1 php -l",
+		"phpcs": "phpcs",
+		"phpcbf": "phpcbf"
+	}
+}
