@@ -76,22 +76,11 @@ More: [all fourteen screens with captions](docs/SCREENSHOTS.md).
 - **No dependencies.** No build step, no bundler, no third-party PHP or JS
   libraries — only WordPress APIs.
 
-## Documentation
 
-| | |
-|---|---|
-| [docs/USER-GUIDE.md](docs/USER-GUIDE.md) | How to use the CRM, screen by screen. |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Modules, request lifecycle, data layer, security model, hook reference. |
-| [docs/DATABASE.md](docs/DATABASE.md) | Every table and column, relationships and migrations. |
-| [docs/API.md](docs/API.md) | REST endpoints, authentication, filters, errors. |
-| [docs/TESTING.md](docs/TESTING.md) | What the integration suites cover. |
-| [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md) | All fourteen screens, with captions. |
-| [docs/DEMO-VIDEO.md](docs/DEMO-VIDEO.md) | Shot-by-shot script for the product video. |
-| [docs/PUBLISHING.md](docs/PUBLISHING.md) | Release checklist for GitHub, WordPress.org and the website. |
 
 Demo data and the screenshot pipeline live in
-[.github/demo/](.github/demo/README.md); the product landing page is
-[website/index.html](website/index.html).
+[.github/demo/](.github/demo/README.md); 
+
 
 ## The REST API in one example
 
